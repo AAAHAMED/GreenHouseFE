@@ -1,11 +1,16 @@
 import React from 'react';
-import Sensor from './pages/sensor/sensor.js';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Sensor from './pages/sensor/sensor';
 
 function App() {
   return (
-    <div className="App">
-      <Sensor />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<Sensor />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
